@@ -1,10 +1,10 @@
 import SplitScreen from "./SplitScreen";
 
-const LeftHandComponent = () => {
-  return <h1>Left!</h1>;
+const LeftHandComponent = ({ name }: { name: string }) => {
+  return <h1>{name}</h1>;
 };
-const RightHandComponent = () => {
-  return <p>Right!</p>;
+const RightHandComponent = ({ message }: { message: string }) => {
+  return <p>{message}</p>;
 };
 
 function App() {
@@ -15,8 +15,8 @@ function App() {
       rightWeight={4}
       leftBgColor="#f5f5f5"
     >
-      <LeftHandComponent />
-      <RightHandComponent />
+      <LeftHandComponent name="Hi,👋🏼" />
+      <RightHandComponent message="This is the right side of the layout" />
     </SplitScreen>
   );
 }
